@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaWP Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>.site-main {
+            width: 100%;
+            height: 100%;
+            background-color: #E8FAF5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0px !important;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .insta-logo {
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #E8FAF5;
+            width: 100%;
+            padding-top: 30px;
+        }
+
+        .insta-site-main {
+            width: 100%;
+            padding: 58px 20px;
+            position: relative;
+            height: 82vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .insta-description-main {
+            margin-top: 30px;
+
+        }
+
+        .insta-left-side h6 {
+            color: #00241F;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%;
+            margin-bottom: 24px;
+            margin-top: 0px;
+        }
+
+        .insta-left-side h6 span {
+            color: #00241F;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 125%;
+        }
+
+        .insta-left-side p {
+            margin-bottom: 30px;
+            color: #3F3F47;
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+        }
+
+        .right-side-main {
+            display: none;
+        }
+
+        .insta-left-side button {
+            display: flex;
+            width: 158px;
+            height: 43px;
+            padding: 10px 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            border-radius: 8px;
+            border: 1.5px solid rgba(255, 255, 255, 0.30);
+            background: #005F54;
+            box-shadow: 0px 0px 0px 1px #006054;
+            box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.10);
+            color: #FFF;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .bg-white-svg {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            transform: rotate(0deg);
+            flex-shrink: 0;
+            fill: #FFF;
+            stroke: #FFF;
+            stroke-width: 8px;
+            stroke: white;
+            filter: blur(4px);
+        }
+
+        .insta-z-index {
+            z-index: 99;
+        }
+
+        .green-shadow-svg {
+            display: none;
+        }
+
+        .green-bg-svg {
+            display: none;
+        }
+
+        .img-1 {
+            display: none;
+        }
+
+        .img-2 {
+            display: none;
+        }
+
+        .img-3 {
+            display: none;
+        }
+
+        .img-4 {
+            display: none;
+        }
+
+        .img-5 {
+            display: none;
+        }
+
+        .img-6 {
+            display: none;
+        }
+
+        .insta-left-side {
+            text-align: center;
+        }
+
+        .insta-left-side button {
+            margin: 0 auto;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+
+        @media (min-width: 575px) {
+            .insta-left-side h6 {
+                color: #00241F;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 125%;
+                margin-bottom: 24px;
+                margin-top: 0px;
+            }
+
+            .insta-left-side h6 span {
+                color: #00241F;
+                font-size: 46px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 125%;
+            }
+
+            .insta-left-side p {
+                margin-bottom: 60px;
+                color: #3F3F47;
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+            }
+
+            .right-side-main {
+                border-radius: 16px;
+                background: rgba(255, 255, 255, 0.4);
+                min-width: 550px;
+                max-width: 550px;
+                height: 648px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+            }
+
+            .right-side-main img {
+                width: 82%;
+            }
+
+            .insta-site-main {
+                height: 100%;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .right-side-main img {
+                width: auto;
+            }
+
+            .right-side-main {
+                border-radius: 16px;
+                background: rgba(255, 255, 255, 0.4);
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .right-side-main img {
+                width: auto;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .insta-logo {
+                display: flex;
+                justify-content: flex-start;
+                background-color: transparent;
+            }
+
+            .insta-logo {
+                display: flex;
+                justify-content: start;
+                position: relative;
+            }
+        }
+
+        @media (min-width: 1440px) {
+            .site-main {
+                width: 100%;
+                height: 100vh !important;
+                overflow: hidden;
+            }
+
+            .insta-site-main {
+                width: 1200px;
+                padding: 58px 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+
+            .insta-description-main {
+                margin-top: 64px;
+                display: flex;
+                align-items: center;
+                gap: 70px;
+            }
+
+            .insta-left-side {
+                text-align: left;
+            }
+
+            .insta-left-side button {
+                margin-left: 0px;
+            }
+
+            .green-shadow-svg {
+                display: block !important;
+                position: absolute;
+                left: 54%;
+                top: 0%;
+                opacity: 0.7;
+                z-index: 1;
+            }
+
+            .green-bg-svg {
+                display: block !important;
+                position: absolute;
+                fill: #FFF;
+                stroke: #FFF;
+                stroke-width: 8px;
+                filter: blur(4px);
+                opacity: 0.55;
+                left: 0;
+                z-index: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .green-bg-svg svg {
+                width: 100%;
+            }
+
+            .img-1 {
+                display: block !important;
+                position: absolute;
+                left: 13%;
+                top: 28%;
+            }
+
+            .img-2 {
+                display: block !important;
+                position: absolute;
+                left: 33%;
+                top: 63%;
+            }
+
+            .img-3 {
+                display: block !important;
+                position: absolute;
+                left: 51.5%;
+                top: 79%;
+            }
+
+            .img-4 {
+                display: block !important;
+                position: absolute;
+                left: 81%;
+                top: 30%;
+            }
+
+            .img-5 {
+                display: block !important;
+                position: absolute;
+                left: 90%;
+                top: 87%;
+            }
+
+            .img-6 {
+                display: block !important;
+                position: absolute;
+                left: 7%;
+                top: 85%;
+            }
+        }</style>
+</head>
+
+<body>
+    <div class="site-main">
+        <div class="insta-site-main">
+            <div class="insta-z-index">
+                <div class="insta-logo">
+                    <a href="https://instawp.to/splash">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="135" height="34" viewbox="0 0 135 34" fill="none">
+                        <path d="M6.35988 12.9136V33.1491H0.605347V12.9136H6.35988Z" fill="#0D4943" style="fill:#0D4943;fill:color(display-p3 0.0510 0.2863 0.2627);fill-opacity:1;"></path>
+                        <path d="M20.4882 16.9722C22.3772 16.9722 23.8572 17.5915 24.9283 18.83C25.9993 20.0494 26.5348 21.7167 26.5348 23.8317V33.1492H20.8388V24.5462C20.8388 23.6125 20.5856 22.8885 20.0793 22.3741C19.5925 21.8405 18.9303 21.5738 18.093 21.5738C17.2361 21.5738 16.5546 21.8501 16.0482 22.4026C15.5418 22.9362 15.2887 23.6792 15.2887 24.632V33.1492H9.53418V17.1151H15.2887V19.8018C15.756 18.9443 16.4377 18.2584 17.3335 17.7439C18.2292 17.2294 19.2809 16.9722 20.4882 16.9722Z" fill="#0D4943" style="fill:#0D4943;fill:color(display-p3 0.0510 0.2863 0.2627);fill-opacity:1;"></path>
+                        <path d="M35.8099 16.9155C37.9715 16.9155 39.695 17.43 40.9802 18.459C42.2656 19.4878 43.0737 20.8502 43.4048 22.546H38.03C37.8937 21.9744 37.6113 21.5457 37.1828 21.2599C36.7739 20.9741 36.2676 20.8311 35.6639 20.8311C35.2354 20.8311 34.9045 20.9265 34.6707 21.117C34.4565 21.2885 34.3495 21.5361 34.3495 21.8601C34.3495 22.2602 34.5831 22.5651 35.0505 22.7747C35.5373 22.9652 36.326 23.1843 37.4165 23.432C38.6824 23.6988 39.7242 23.9846 40.5421 24.2894C41.3795 24.5943 42.1 25.0897 42.7037 25.7757C43.3269 26.4617 43.6385 27.3858 43.6385 28.548C43.6385 29.4817 43.3756 30.3106 42.8498 31.0346C42.324 31.7587 41.5547 32.3303 40.5421 32.7495C39.549 33.1497 38.3708 33.3497 37.0076 33.3497C34.7097 33.3497 32.8791 32.8639 31.516 31.892C30.1528 30.9203 29.3252 29.5294 29.0331 27.7192H34.5539C34.6317 28.3099 34.885 28.7482 35.3134 29.034C35.7612 29.3198 36.3162 29.4627 36.9784 29.4627C37.4263 29.4627 37.7671 29.3674 38.0007 29.1769C38.2344 28.9863 38.3513 28.7386 38.3513 28.4338C38.3513 27.9764 38.0981 27.643 37.5918 27.4334C37.105 27.2238 36.3162 27.0142 35.2257 26.8046C33.9794 26.5569 32.9571 26.2901 32.1586 26.0043C31.3601 25.6995 30.6591 25.2231 30.0554 24.5753C29.4712 23.9084 29.1791 22.9938 29.1791 21.8315C29.1791 20.3833 29.7536 19.202 30.9025 18.2874C32.0515 17.3729 33.6873 16.9155 35.8099 16.9155Z" fill="#0D4943" style="fill:#0D4943;fill:color(display-p3 0.0510 0.2863 0.2627);fill-opacity:1;"></path>
+                        <path d="M55.9181 28.3474V33.1491H53.5521C51.5462 33.1491 49.9785 32.6632 48.8491 31.6914C47.7196 30.7197 47.1549 29.1096 47.1549 26.8612V21.8024H45.0516V17.1151H47.1549V13.228H52.9094V17.1151H55.8597V21.8024H52.9094V26.9756C52.9094 27.471 53.0164 27.8235 53.2307 28.0331C53.4644 28.2426 53.8441 28.3474 54.37 28.3474H55.9181Z" fill="#0D4943" style="fill:#0D4943;fill:color(display-p3 0.0510 0.2863 0.2627);fill-opacity:1;"></path>
+                        <path d="M64.6181 16.9155C65.7671 16.9155 66.7602 17.1633 67.5976 17.6587C68.4545 18.135 69.0874 18.8019 69.4963 19.6594V17.1156H75.2216V33.1497H69.4963V30.6059C69.0874 31.4633 68.4545 32.1398 67.5976 32.6352C66.7602 33.1115 65.7671 33.3497 64.6181 33.3497C63.3134 33.3497 62.1352 33.0258 61.0837 32.3779C60.032 31.7111 59.2044 30.7583 58.6008 29.5199C57.997 28.2622 57.6952 26.7951 57.6952 25.1184C57.6952 23.4415 57.997 21.9839 58.6008 20.7454C59.2044 19.5069 60.032 18.5637 61.0837 17.9159C62.1352 17.249 63.3134 16.9155 64.6181 16.9155ZM66.5168 21.8315C65.621 21.8315 64.8907 22.1269 64.326 22.7176C63.7807 23.2892 63.5081 24.0894 63.5081 25.1184C63.5081 26.1663 63.7807 26.9856 64.326 27.5763C64.8907 28.1479 65.621 28.4338 66.5168 28.4338C67.3737 28.4338 68.0844 28.1384 68.6492 27.5478C69.2139 26.9571 69.4963 26.1472 69.4963 25.1184C69.4963 24.1085 69.2139 23.3082 68.6492 22.7176C68.0844 22.1269 67.3737 21.8315 66.5168 21.8315Z" fill="#0D4943" style="fill:#0D4943;fill:color(display-p3 0.0510 0.2863 0.2627);fill-opacity:1;"></path>
+                        <path d="M124.421 26.3753V33.1491H118.666V12.9136H127.254C129.747 12.9136 131.645 13.5328 132.95 14.7714C134.275 15.9908 134.936 17.6294 134.936 19.6873C134.936 20.9639 134.644 22.1072 134.06 23.117C133.476 24.1269 132.6 24.9272 131.431 25.5178C130.282 26.0895 128.89 26.3753 127.254 26.3753H124.421ZM126.612 21.9453C128.286 21.9453 129.124 21.1926 129.124 19.6873C129.124 18.2011 128.286 17.458 126.612 17.458H124.421V21.9453H126.612Z" fill="#0D4943" style="fill:#0D4943;fill:color(display-p3 0.0510 0.2863 0.2627);fill-opacity:1;"></path>
+                        <path d="M110.836 12.9176H116.707C116.806 12.9173 116.904 12.9426 116.99 12.9909C117.077 13.0393 117.15 13.1091 117.199 13.1932C117.25 13.2773 117.276 13.3729 117.277 13.4703C117.277 13.5677 117.252 13.6636 117.203 13.7483L106.638 32.0885C106.478 32.3678 106.244 32.6004 105.961 32.7623C105.678 32.9242 105.357 33.0097 105.028 33.01H100.534C100.16 33.01 99.7943 32.8985 99.4864 32.6904C99.1778 32.4823 98.9418 32.1874 98.809 31.8448L97.7087 29.0159L97.7861 29.0669C98.1378 29.2897 98.5322 29.4393 98.9454 29.5066C99.3592 29.5739 99.7822 29.5574 100.189 29.4581C100.595 29.3588 100.976 29.1788 101.309 28.9294C101.641 28.6799 101.919 28.3664 102.122 28.0079L108.46 16.9006H103.403C103.294 16.9027 103.188 16.8745 103.095 16.8193C103.003 16.7641 102.929 16.6841 102.881 16.589C102.834 16.4937 102.815 16.3872 102.827 16.2818C102.839 16.1766 102.882 16.0769 102.95 15.9946L115.661 0.527558C115.725 0.459595 115.811 0.415701 115.905 0.40342C115.999 0.391139 116.094 0.411237 116.175 0.460261C116.256 0.509284 116.316 0.584171 116.346 0.672051C116.376 0.759931 116.374 0.855317 116.34 0.941813L110.836 12.9176Z" fill="url(#paint0_linear_81_561)" style=""></path>
+                        <path d="M90.1944 31.9001C90.1944 32.0456 90.1652 32.1896 90.1081 32.3239C90.0514 32.4584 89.9681 32.5804 89.8629 32.6834C89.7581 32.7861 89.6328 32.8678 89.4958 32.9234C89.3584 32.979 89.211 33.0077 89.0625 33.0077H84.2422C84.0085 33.0077 83.7809 32.9371 83.5898 32.8054C83.3987 32.6738 83.2545 32.4875 83.176 32.2723L82.6033 30.6795L76.7234 14.4128C76.662 14.2437 76.6431 14.0626 76.668 13.885C76.6936 13.7072 76.7618 13.538 76.8676 13.3915C76.9736 13.245 77.1135 13.1255 77.2766 13.043C77.4391 12.9605 77.6199 12.9174 77.803 12.9175H82.2071C82.4956 12.9173 82.7774 13.0042 83.0141 13.1663C83.2508 13.3285 83.4303 13.5579 83.5289 13.8235L89.8116 30.6596L90.1336 31.519C90.1763 31.6416 90.1969 31.7705 90.1944 31.9001Z" fill="#056960" style="fill:#056960;fill:color(display-p3 0.0196 0.4118 0.3765);fill-opacity:1;"></path>
+                        <path d="M95.0826 22.2818L91.4604 32.2993C91.3844 32.5084 91.2438 32.6893 91.0588 32.8174C90.8738 32.9455 90.6522 33.0144 90.4259 33.0148H84.2423C84.008 33.0143 83.7799 32.9427 83.5888 32.8098C83.3977 32.6769 83.2534 32.4892 83.1762 32.2727L82.6011 30.6799C82.7142 30.8616 83.6581 32.2793 84.8332 30.66L90.8738 14.4708C90.8738 14.4708 91.5986 14.041 92.0422 14.4708L95.0826 22.2818Z" fill="#0D4943" style="fill:#0D4943;fill:color(display-p3 0.0510 0.2863 0.2627);fill-opacity:1;"></path>
+                        <path d="M103.251 26.0385L100.519 30.8168C100.407 31.0123 100.241 31.1726 100.039 31.2786C99.8373 31.3847 99.6091 31.4323 99.3808 31.4159C99.1527 31.3993 98.9336 31.3193 98.7504 31.1854C98.5673 31.0514 98.4267 30.869 98.3451 30.6596L95.0827 22.2814L92.153 14.7495C92.0897 14.5914 91.9716 14.4602 91.8189 14.3791C91.6668 14.298 91.4897 14.2723 91.3199 14.3064C91.1611 14.339 91.0077 14.3957 90.8672 14.4748C91.0169 14.0649 91.2822 13.7048 91.6321 13.4358C92.0593 13.1008 92.5906 12.9181 93.1377 12.9175H97.1773C97.5966 12.9166 98.0055 13.0422 98.3494 13.2773C98.6926 13.5124 98.9537 13.8455 99.0967 14.2311L103.292 25.4714C103.328 25.5631 103.342 25.6615 103.336 25.7593C103.329 25.8572 103.3 25.9525 103.251 26.0385Z" fill="#056960" style="fill:#056960;fill:color(display-p3 0.0196 0.4118 0.3765);fill-opacity:1;"></path>
+                        <defs>
+                            <lineargradient id="paint0_linear_81_561" x1="106.656" y1="28.0705" x2="114.904" y2="0.299969" gradientunits="userSpaceOnUse">
+                                <stop stop-color="#FE8551" style="stop-color:#FE8551;stop-color:color(display-p3 0.9961 0.5216 0.3176);stop-opacity:1;"></stop>
+                                <stop offset="1" stop-color="#ED618E" style="stop-color:#ED618E;stop-color:color(display-p3 0.9294 0.3804 0.5569);stop-opacity:1;"></stop>
+                            </lineargradient>
+                        </defs>
+                    </svg>
+                    </a>
+                </div>
+                <div class="insta-description-main">
+                    <div class="insta-left-side">
+                        <h6>This is an <span>InstaWP</span> site and not intended to be used for live traffic.</h6>
+                        <p>This page is shown because you are using a <a href="https://instawp.to/splash-pricing">free InstaWP</a> account.</p>
+                        <button onclick="setCookie()">Continue to Site</button>
+                    </div>
+                    <div class="right-side-main">
+                        <a href="https://instawp.to/splash"><img src="https://instawpcom.b-cdn.net/wp-content/uploads/2023/11/instawp-person.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="green-shadow-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="778" height="589" viewbox="0 0 778 589" fill="none">
+                <g opacity="0.39" filter="url(#filter0_f_81_401)">
+                    <path d="M97 142.109C97 270.94 155.671 470.309 367.456 492C449.884 492 691 456.074 691 327.243C691 198.413 491.643 201.351 409.216 201.351C326.789 201.351 97 13.278 97 142.109Z" fill="#11BF85" style="fill:#11BF85;fill:color(display-p3 0.0656 0.7500 0.5232);fill-opacity:1;"></path>
+                </g>
+                <defs>
+                    <filter id="filter0_f_81_401" x="0.5" y="0.5" width="787" height="588" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feblend>
+                        <fegaussianblur stddeviation="48.25" result="effect1_foregroundBlur_81_401"></fegaussianblur>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+        <div class="green-bg-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1680" height="900" viewbox="0 0 1680 900" fill="none">
+                <g filter="url(#filter0_f_81_399)">
+                    <path d="M1784.18 -477.184C1852.56 -153.18 1713.83 273.607 1441.16 362.258C803.456 569.582 -246.243 960.862 -370.838 1324.61C-551.264 1851.35 -643.007 35.1073 -643.007 35.1073L1784.18 -477.184Z" fill="white" style="fill:white;fill:white;fill-opacity:1;"></path>
+                    <path d="M1439.92 358.454C1574.64 314.654 1676.83 187.074 1736.83 29.372C1796.31 -126.967 1814 -312.139 1781.08 -472.442L-638.836 38.3152C-638.809 38.8469 -638.778 39.4395 -638.743 40.0922C-638.565 43.5101 -638.296 48.5746 -637.938 55.1588C-637.222 68.3274 -636.149 87.5747 -634.719 111.885C-631.859 160.507 -627.571 229.381 -621.863 310.384C-610.445 472.399 -593.344 682.9 -570.609 876.921C-547.858 1071.09 -519.511 1248.3 -485.71 1344.01C-477.263 1367.93 -468.569 1386.48 -459.701 1398.88C-450.729 1411.43 -442.289 1416.73 -434.486 1416.44C-426.595 1416.14 -417.347 1410.06 -406.94 1394.69C-396.649 1379.49 -385.855 1356.11 -374.622 1323.31C-343.051 1231.14 -253.199 1137.87 -127.172 1046.7C-0.994929 955.422 162.073 865.811 341.034 781.159C698.975 611.847 1121.01 462.134 1439.92 358.454Z" stroke="url(#paint0_radial_81_399)" stroke-opacity="0.1" style="" stroke-width="8"></path>
+                </g>
+                <defs>
+                    <filter id="filter0_f_81_399" x="-651.007" y="-485.184" width="2460.46" height="1913.63" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feblend>
+                        <fegaussianblur stddeviation="4" result="effect1_foregroundBlur_81_399"></fegaussianblur>
+                    </filter>
+                    <radialgradient id="paint0_radial_81_399" cx="0" cy="0" r="1" gradientunits="userSpaceOnUse" gradienttransform="translate(347.093 781.882) rotate(-139.074) scale(1419.87 1300.05)">
+                        <stop stop-color="white" style="stop-color:white;stop-color:white;stop-opacity:1;"></stop>
+                        <stop offset="1" stop-color="white" stop-opacity="0" style="stop-color:none;stop-color:none;stop-opacity:0;"></stop>
+                    </radialgradient>
+                </defs>
+            </svg>
+        </div>
+        <div class="img-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="66" height="50" viewbox="0 0 66 50" fill="none">
+                <g opacity="0.26" filter="url(#filter0_d_81_535)">
+                    <rect opacity="0.4" width="32.1062" height="30.674" rx="2" transform="matrix(1 0 -0.422618 0.906308 16.9635 0)" fill="#EBF9F5" style="fill:#EBF9F5;fill:color(display-p3 0.9216 0.9765 0.9608);fill-opacity:1;"></rect>
+                    <rect opacity="0.36" x="0.288691" y="0.453154" width="31.1062" height="29.674" rx="1.5" transform="matrix(1 0 -0.422618 0.906308 17.155 0.042457)" fill="#EBF9F5" stroke="#11BF85" style="fill:#EBF9F5;fill:color(display-p3 0.9216 0.9765 0.9608);fill-opacity:1;stroke:#11BF85;stroke:color(display-p3 0.0656 0.7500 0.5232);stroke-opacity:1;"></rect>
+                </g>
+                <g opacity="0.26" filter="url(#filter1_d_81_535)">
+                    <rect opacity="0.4" width="32.1062" height="30.674" rx="2" transform="matrix(1 0 -0.422618 0.906308 29.8738 14.1997)" fill="#EBF9F5" style="fill:#EBF9F5;fill:color(display-p3 0.9216 0.9765 0.9608);fill-opacity:1;"></rect>
+                    <rect opacity="0.36" width="32.1062" height="30.674" rx="2" transform="matrix(1 0 -0.422618 0.906308 29.8738 14.1997)" fill="#EBF9F5" style="fill:#EBF9F5;fill:color(display-p3 0.9216 0.9765 0.9608);fill-opacity:1;"></rect>
+                </g>
+                <defs>
+                    <filter id="filter0_d_81_535" x="0.673462" y="0" width="51.7228" height="35.8003" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+                        <feoffset dy="4"></feoffset>
+                        <fegaussianblur stddeviation="2"></fegaussianblur>
+                        <fecomposite in2="hardAlpha" operator="out"></fecomposite>
+                        <fecolormatrix type="matrix" values="0 0 0 0 0.065625 0 0 0 0 0.75 0 0 0 0 0.523225 0 0 0 1 0"></fecolormatrix>
+                        <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_81_535"></feblend>
+                        <feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_81_535" result="shape"></feblend>
+                    </filter>
+                    <filter id="filter1_d_81_535" x="13.5837" y="14.1997" width="51.7228" height="35.8003" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+                        <feoffset dy="4"></feoffset>
+                        <fegaussianblur stddeviation="2"></fegaussianblur>
+                        <fecomposite in2="hardAlpha" operator="out"></fecomposite>
+                        <fecolormatrix type="matrix" values="0 0 0 0 0.065625 0 0 0 0 0.75 0 0 0 0 0.523225 0 0 0 0.7 0"></fecolormatrix>
+                        <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_81_535"></feblend>
+                        <feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_81_535" result="shape"></feblend>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+        <div class="img-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="24" viewbox="0 0 33 24" fill="none">
+                <g opacity="0.26" filter="url(#filter0_d_81_545)">
+                    <rect opacity="0.4" width="18.4783" height="17.654" rx="2" transform="matrix(1 0 -0.422618 0.906308 10.8486 0)" fill="#EBF9F5" style="fill:#EBF9F5;fill:color(display-p3 0.9216 0.9765 0.9608);fill-opacity:1;"></rect>
+                    <rect opacity="0.36" width="18.4783" height="17.654" rx="2" transform="matrix(1 0 -0.422618 0.906308 10.8486 0)" fill="#EBF9F5" style="fill:#EBF9F5;fill:color(display-p3 0.9216 0.9765 0.9608);fill-opacity:1;"></rect>
+                </g>
+                <defs>
+                    <filter id="filter0_d_81_545" x="0.0610352" y="0" width="32.5925" height="24" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+                        <feoffset dy="4"></feoffset>
+                        <fegaussianblur stddeviation="2"></fegaussianblur>
+                        <fecomposite in2="hardAlpha" operator="out"></fecomposite>
+                        <fecolormatrix type="matrix" values="0 0 0 0 0.065625 0 0 0 0 0.75 0 0 0 0 0.523225 0 0 0 0.7 0"></fecolormatrix>
+                        <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_81_545"></feblend>
+                        <feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_81_545" result="shape"></feblend>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+        <div class="img-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="29" viewbox="0 0 42 29" fill="none">
+                <g opacity="0.26" filter="url(#filter0_d_81_551)">
+                    <rect opacity="0.4" width="24.2528" height="23.1709" rx="2" transform="matrix(1 0 -0.422618 0.906308 13.4321 0)" fill="#EBF9F5" style="fill:#EBF9F5;fill:color(display-p3 0.9216 0.9765 0.9608);fill-opacity:1;"></rect>
+                    <rect opacity="0.36" x="0.288691" y="0.453154" width="23.2528" height="22.1709" rx="1.5" transform="matrix(1 0 -0.422618 0.906308 13.6236 0.042457)" fill="#EBF9F5" stroke="#11BF85" style="fill:#EBF9F5;fill:color(display-p3 0.9216 0.9765 0.9608);fill-opacity:1;stroke:#11BF85;stroke:color(display-p3 0.0656 0.7500 0.5232);stroke-opacity:1;"></rect>
+                </g>
+                <defs>
+                    <filter id="filter0_d_81_551" x="0.312988" y="0" width="40.6985" height="29" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+                        <feoffset dy="4"></feoffset>
+                        <fegaussianblur stddeviation="2"></fegaussianblur>
+                        <fecomposite in2="hardAlpha" operator="out"></fecomposite>
+                        <fecolormatrix type="matrix" values="0 0 0 0 0.065625 0 0 0 0 0.75 0 0 0 0 0.523225 0 0 0 1 0"></fecolormatrix>
+                        <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_81_551"></feblend>
+                        <feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_81_551" result="shape"></feblend>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+        <div class="img-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="67" height="49" viewbox="0 0 67 49" fill="none">
+                <g opacity="0.26" filter="url(#filter0_d_81_554)">
+                    <rect opacity="0.4" width="34.5703" height="33.0282" rx="2" transform="matrix(1 0 -0.422618 0.906308 28.9583 10.8662)" fill="#EBF9F5" style="fill:#EBF9F5;fill:color(display-p3 0.9216 0.9765 0.9608);fill-opacity:1;"></rect>
+                    <rect opacity="0.36" x="0.288691" y="0.453154" width="33.5703" height="32.0282" rx="1.5" transform="matrix(1 0 -0.422618 0.906308 29.1498 10.9087)" fill="#EBF9F5" stroke="#11BF85" style="fill:#EBF9F5;fill:color(display-p3 0.9216 0.9765 0.9608);fill-opacity:1;stroke:#11BF85;stroke:color(display-p3 0.0656 0.7500 0.5232);stroke-opacity:1;"></rect>
+                </g>
+                <g opacity="0.26" filter="url(#filter1_d_81_554)">
+                    <rect opacity="0.4" width="34.5703" height="33.0282" rx="2" transform="matrix(1 0 -0.422618 0.906308 17.9583 0)" fill="#EBF9F5" style="fill:#EBF9F5;fill:color(display-p3 0.9216 0.9765 0.9608);fill-opacity:1;"></rect>
+                    <rect opacity="0.36" x="0.288691" y="0.453154" width="33.5703" height="32.0282" rx="1.5" transform="matrix(1 0 -0.422618 0.906308 18.1498 0.042457)" fill="#EBF9F5" stroke="#11BF85" style="fill:#EBF9F5;fill:color(display-p3 0.9216 0.9765 0.9608);fill-opacity:1;stroke:#11BF85;stroke:color(display-p3 0.0656 0.7500 0.5232);stroke-opacity:1;"></rect>
+                </g>
+                <defs>
+                    <filter id="filter0_d_81_554" x="11.6733" y="10.8662" width="55.1819" height="37.9336" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+                        <feoffset dy="4"></feoffset>
+                        <fegaussianblur stddeviation="2"></fegaussianblur>
+                        <fecomposite in2="hardAlpha" operator="out"></fecomposite>
+                        <fecolormatrix type="matrix" values="0 0 0 0 0.065625 0 0 0 0 0.75 0 0 0 0 0.523225 0 0 0 1 0"></fecolormatrix>
+                        <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_81_554"></feblend>
+                        <feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_81_554" result="shape"></feblend>
+                    </filter>
+                    <filter id="filter1_d_81_554" x="0.67334" y="0" width="55.1819" height="37.9336" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+                        <feoffset dy="4"></feoffset>
+                        <fegaussianblur stddeviation="2"></fegaussianblur>
+                        <fecomposite in2="hardAlpha" operator="out"></fecomposite>
+                        <fecolormatrix type="matrix" values="0 0 0 0 0.065625 0 0 0 0 0.75 0 0 0 0 0.523225 0 0 0 1 0"></fecolormatrix>
+                        <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_81_554"></feblend>
+                        <feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_81_554" result="shape"></feblend>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+        <div class="img-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="43" height="30" viewbox="0 0 43 30" fill="none">
+                <g opacity="0.26" filter="url(#filter0_d_81_548)">
+                    <rect opacity="0.4" width="25.166" height="24.0434" rx="2" transform="matrix(1 0 -0.422618 0.906308 14.1611 0)" fill="#EBF9F5" style="fill:#EBF9F5;fill:color(display-p3 0.9216 0.9765 0.9608);fill-opacity:1;"></rect>
+                    <rect opacity="0.36" width="25.166" height="24.0434" rx="2" transform="matrix(1 0 -0.422618 0.906308 14.1611 0)" fill="#EBF9F5" style="fill:#EBF9F5;fill:color(display-p3 0.9216 0.9765 0.9608);fill-opacity:1;"></rect>
+                </g>
+                <defs>
+                    <filter id="filter0_d_81_548" x="0.67334" y="0" width="41.9805" height="29.7905" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+                        <feoffset dy="4"></feoffset>
+                        <fegaussianblur stddeviation="2"></fegaussianblur>
+                        <fecomposite in2="hardAlpha" operator="out"></fecomposite>
+                        <fecolormatrix type="matrix" values="0 0 0 0 0.065625 0 0 0 0 0.75 0 0 0 0 0.523225 0 0 0 0.7 0"></fecolormatrix>
+                        <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_81_548"></feblend>
+                        <feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_81_548" result="shape"></feblend>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+        <div class="img-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="43" height="30" viewbox="0 0 43 30" fill="none">
+                <g opacity="0.26" filter="url(#filter0_d_81_542)">
+                    <rect opacity="0.4" width="25.166" height="24.0434" rx="2" transform="matrix(1 0 -0.422618 0.906308 14.1611 0)" fill="#EBF9F5" style="fill:#EBF9F5;fill:color(display-p3 0.9216 0.9765 0.9608);fill-opacity:1;"></rect>
+                    <rect opacity="0.36" width="25.166" height="24.0434" rx="2" transform="matrix(1 0 -0.422618 0.906308 14.1611 0)" fill="#EBF9F5" style="fill:#EBF9F5;fill:color(display-p3 0.9216 0.9765 0.9608);fill-opacity:1;"></rect>
+                </g>
+                <defs>
+                    <filter id="filter0_d_81_542" x="0.67334" y="0" width="41.9803" height="29.7905" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+                        <feoffset dy="4"></feoffset>
+                        <fegaussianblur stddeviation="2"></fegaussianblur>
+                        <fecomposite in2="hardAlpha" operator="out"></fecomposite>
+                        <fecolormatrix type="matrix" values="0 0 0 0 0.065625 0 0 0 0 0.75 0 0 0 0 0.523225 0 0 0 0.7 0"></fecolormatrix>
+                        <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_81_542"></feblend>
+                        <feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_81_542" result="shape"></feblend>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+
+        <script>function setCookie() {
+                document.cookie = "instawp_skip_splash=true; path=/";
+                location.reload();
+            }</script>
+    </div>
+</body>
+
+</html>
